@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2023 at 04:52 PM
+-- Generation Time: Mar 01, 2023 at 06:32 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `webcourse_db`
+-- Database: `mydb`
 --
 
 -- --------------------------------------------------------
@@ -70,6 +70,92 @@ INSERT INTO `sci_cs` (`cs_id`, `cs_name`, `cs_img`, `cs_date`, `cs_wallet`, `cs_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `soccer_tb`
+--
+
+CREATE TABLE `soccer_tb` (
+  `identifier` int(11) NOT NULL,
+  `first_name` varchar(10) DEFAULT NULL,
+  `last_name` varchar(12) NOT NULL,
+  `team` varchar(17) NOT NULL,
+  `position` varchar(12) NOT NULL,
+  `image` varchar(21) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `soccer_tb`
+--
+
+INSERT INTO `soccer_tb` (`identifier`, `first_name`, `last_name`, `team`, `position`, `image`) VALUES
+(1001, 'Eric', 'Bailly', 'Manchester United', 'Defender', 'ericbailly.jpg'),
+(1003, 'Hector', 'Bellerin', 'Arsenal', 'Defender', 'hectorbellerin.jpg'),
+(1006, 'Jonny', 'Evans', 'West Brom', 'Defender', 'jonnyevans.jpg'),
+(1007, 'Robert', 'Huth', 'Leicester', 'Defender', 'roberthuth.jpg'),
+(1008, 'Aleksandar', 'Kolarov', 'Manchester City', 'Defender', 'aleksandarkolarov.jpg'),
+(1009, 'Laurent', 'Koscielny', 'Arsenal', 'Defender', 'laurentkoscielny.jpg'),
+(1011, 'Gareth', 'McAuley', 'West Brom', 'Defender', 'garethmcauley.jpg'),
+(1012, 'Wes', 'Morgan', 'Leicester', 'Defender', 'wesmorgan.jpg'),
+(1014, 'Kyle', 'Walker', 'Tottenham', 'Defender', 'kylewalker.jpg'),
+(1015, 'Claudio', 'Bravo', 'Manchester City', 'Goalkeeper', 'claudiobravo.jpg'),
+(1016, 'Thibaut', 'Courtois', 'Chelsea', 'Goalkeeper', 'thibautcourtois.jpg'),
+(1017, 'David', 'De Gea', 'Manchester United', 'Goalkeeper', 'daviddegea.jpg'),
+(1018, 'Hugo', 'Lloris', 'Tottenham', 'Goalkeeper', 'hugolloris.jpg'),
+(1021, 'Nacer', 'Chadli', 'West Brom', 'Midfielder 2', 'nacerchadli.jpg'),
+(1026, 'Eden', 'Hazard', 'Chelsea', 'Midfielder 1', 'edenhazard.jpg'),
+(1027, 'Alex', 'Iwobi', 'Arsenal', 'Midfielder 2', 'alexiwobi.jpg'),
+(1029, 'Riyad', 'Mahrez', 'Leicester', 'Midfielder 2', 'riyadmahrez.jpg'),
+(1031, 'Juan', 'Mata', 'Manchester United', 'Midfielder 1', 'juanmata.jpg'),
+(1032, 'Victor', 'Moses', 'Chelsea', 'Midfielder 2', 'victormoses.jpg'),
+(1033, 'Mesut', 'Ozil', 'Arsenal', 'Midfielder 1', 'mesutozil.jpg'),
+(1034, 'Paul', 'Pogba', 'Manchester United', 'Midfielder 2', 'paulpogba.jpg'),
+(1035, 'Heung-Min', 'Son', 'Tottenham', 'Midfielder 1', 'heung-minson.jpg'),
+(1036, 'Raheem', 'Sterling', 'Manchester City', 'Midfielder 2', 'raheemsterling.jpg'),
+(1037, 'Victor', 'Wanyama', 'Tottenham', 'Midfielder 1', 'victorwanyama.jpg'),
+(1038, 'Daniel', 'Amartey', 'Leicester', 'Midfielder 2', 'danielamartey.jpg'),
+(1040, 'David', 'Silva', 'Manchester City', 'Midfielder 1', 'davidsilva.jpg'),
+(1041, 'Theo', 'Walcott', 'Arsenal', 'Midfielder 2', 'theowalcott.jpg'),
+(1042, 'Sergio', 'Aguero', 'Manchester City', 'Striker', 'sergioaguero.jpg'),
+(1043, 'Diego', 'Costa', 'Chelsea', 'Striker', 'diegocosta.jpg'),
+(1044, 'Zlatan', 'Ibrahimovic', 'Manchester United', 'Striker', 'zlatanibrahimovic.jpg'),
+(1045, 'Kelechi', 'Iheanacho', 'Manchester City', 'Striker', 'kelechiiheanacho.jpg'),
+(1047, 'Salomon', 'Rondon', 'West Brom', 'Striker', 'salomonrondon.jpg'),
+(1048, 'Alexis', 'Sanchez', 'Arsenal', 'Striker', 'alexissanchez.jpg'),
+(1049, 'Islam', 'Slimani', 'Leicester', 'Striker', 'islamslimani.jpg'),
+(1101, 'Petr', 'Cech', 'Arsenal', 'Goalkeeper', 'petrcech.jpg'),
+(1103, 'Christian', 'Benteke', 'Crystal Palace', 'Striker', 'christianbenteke.jpg'),
+(1104, 'Nemanja', 'Matic', 'Chelsea', 'Midfielder 2', 'nemanjamatic.jpg'),
+(1201, 'Cesar', 'Azpilicueta', 'Chelsea', 'Defender', 'cesarazpilicueta.jpg'),
+(1203, 'Kevin', 'De Bruyne', 'Manchester City', 'Midfielder 2', 'kevindebruyne.jpg'),
+(1204, 'Marcus', 'Rashford', 'Manchester United', 'Striker', 'marcusrashford.jpg'),
+(1208, 'Christian', 'Eriksen', 'Tottenham', 'Midfielder 2', 'christianeriksen.jpg'),
+(1209, 'Harry', 'Kane', 'Tottenham', 'Striker', 'harrykane.jpg'),
+(1302, 'Jamie', 'Vardy', 'Leicester', 'Striker', 'jamievardy.jpg'),
+(1304, 'Gary', 'Cahill', 'Chelsea', 'Defender', 'garycahill.jpg'),
+(1401, 'Dele', 'Alli', 'Tottenham', 'Midfielder 1', 'delealli.jpg'),
+(1402, 'Olivier', 'Giroud', 'Arsenal', 'Striker', 'oliviergiroud.jpg'),
+(1404, 'Marcos', 'Alonso', 'Chelsea', 'Defender', 'marcosalonso.jpg'),
+(1500, 'Yaya', 'Toure', 'Manchester City', 'Midfielder 1', 'yayatoure.jpg'),
+(1701, 'Willian', 'Borges', 'Chelsea', 'Midfielder 1', 'willian.jpg'),
+(1703, 'Gael', 'Clichy', 'Manchester City', 'Defender', 'gaelclichy.jpg'),
+(1704, 'Antonio', 'Valencia', 'Manchester United', 'Defender', 'antoniovalencia.jpg'),
+(1705, 'Phil', 'Jones', 'Manchester United', 'Defender', 'philjones.jpg'),
+(1706, 'Ander', 'Herrera', 'Manchester United', 'Midfielder 1', 'anderherrera.jpg'),
+(1707, 'Matt', 'Phillips', 'West Brom', 'Midfielder 1', 'mattphillips.jpg'),
+(1709, 'Joe', 'Allen', 'Stoke', 'Midfielder 1', 'joeallen.jpg'),
+(2001, 'Marko', 'Arnautovic', 'Stoke', 'Midfielder 2', 'markoarnautovic.jpg'),
+(2002, 'Peter', 'Crouch', 'Stoke', 'Striker', 'petercrouch.jpg'),
+(2200, 'Gabriel', 'Jesus', 'Manchester City', 'Striker', 'gabrieljesus.jpg'),
+(2201, 'Leroy', 'Sane', 'Manchester City', 'Midfielder 1', 'leroysane.jpg'),
+(2202, 'Henrikh', 'Mkhitaryan', 'Manchester United', 'Midfielder 2', 'henrikhmkhitaryan.jpg'),
+(2306, 'Kasper', 'Schmeichel', 'Leicester', 'Goalkeeper', 'kasperschmeichel.jpg'),
+(2307, 'Erik', 'Pieters', 'Stoke', 'Defender', 'erikpieters.jpg'),
+(2308, 'Ryan', 'Shawcross', 'Stoke', 'Defender', 'ryanshawcross.jpg'),
+(2310, 'Eric', 'Dier', 'Tottenham', 'Midfielder 2', 'ericdier.jpg'),
+(2311, 'Ben', 'Foster', 'West Brom', 'Goalkeeper', 'benfoster.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user_tb`
 --
 
@@ -99,7 +185,8 @@ INSERT INTO `user_tb` (`id`, `username`, `upassword`, `email`, `urole`) VALUES
 (11, 'gunktp201', 'gunktp20', 'gunktp201@gmai.com', 'admin'),
 (12, 'gunktp14', 'gunktp14', 'gunktp14@gmail.com', 'user'),
 (13, 'gunktp50', 'gunktp50', 'gunktp50@gmail.com', 'admin'),
-(14, 'gunktp206', 'gunktp206', 'gunktp206@gmail.com', 'user');
+(14, 'gunktp206', 'gunktp206', 'gunktp206@gmail.com', 'user'),
+(15, 'gunktp99', 'gunktp99', 'gunktp99@gmail.com', 'user');
 
 --
 -- Indexes for dumped tables
@@ -110,6 +197,12 @@ INSERT INTO `user_tb` (`id`, `username`, `upassword`, `email`, `urole`) VALUES
 --
 ALTER TABLE `sci_cs`
   ADD PRIMARY KEY (`cs_id`);
+
+--
+-- Indexes for table `soccer_tb`
+--
+ALTER TABLE `soccer_tb`
+  ADD PRIMARY KEY (`identifier`);
 
 --
 -- Indexes for table `user_tb`
@@ -128,10 +221,16 @@ ALTER TABLE `sci_cs`
   MODIFY `cs_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
+-- AUTO_INCREMENT for table `soccer_tb`
+--
+ALTER TABLE `soccer_tb`
+  MODIFY `identifier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2313;
+
+--
 -- AUTO_INCREMENT for table `user_tb`
 --
 ALTER TABLE `user_tb`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
